@@ -76,6 +76,15 @@ class NetSuiteClient
         $options['keep_alive'] = false; // do not maintain http connection to the server.
         $options['features'] = SOAP_SINGLE_ELEMENT_ARRAYS;
 
+        $options['stream_context'] = stream_context_create(
+            [
+                'ssl' => [
+                    'verify_peer'       => false,
+                    'verify_peer_name'  => false,
+                ]
+            ]
+        );
+
         if (isset($debuginfo)) {
             $httpheaders .= "\r\nDebug: true";
             $httpheaders .= "\r\nUser: " . $debuginfo["email"];
