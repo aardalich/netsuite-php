@@ -1,5 +1,5 @@
 {
-  "name": "fungku/netsuite-php",
+  "name": "aardalich/netsuite-php",
   "description": "NetSuite PHP API Client with namespaces and autoloading",
   "keywords": [ "netsuite", "api" ],
   "type": "library",
